@@ -90,7 +90,7 @@ const WhySlide = () => {
             <div className="my-6 flex justify-center gap-6">
               <button
                 type="button"
-                className={`relative h-2 w-2 rounded-full ${
+                className={`relative h-2 w-2 rounded-full mr-4 md:ml-0 ${
                   tab === "secure" ? "bg-gray-500" : "bg-gray-200"
                 }`}
                 aria-label="Secure Slide"
@@ -110,7 +110,7 @@ const WhySlide = () => {
               ></button>
               <button
                 type="button"
-                className={`relative h-2 w-2 rounded-full ${
+                className={`relative h-2 w-2 rounded-full ml-4 md:mr-0 ${
                   tab === "multi-chain" ? "bg-gray-500" : "bg-gray-200"
                 }`}
                 aria-label="Multi-chain Slide"
@@ -125,7 +125,7 @@ const WhySlide = () => {
               aria-orientation="horizontal"
             >
               <div
-                className={`text-center font-semibold text-[24px] ml-4 cursor-pointer ${
+                className={`text-center font-semibold text-[24px] ml-4 md:ml-0 cursor-pointer ${
                   tab === "secure" ? "text-[#144B44]" : "text-[#AAAAAA]"
                 } transition-colors`}
                 onClick={() => handleTabChange("secure")}
@@ -147,7 +147,7 @@ const WhySlide = () => {
                 Global
               </div>
               <div
-                className={`text-center font-semibold text-[24px] cursor-pointer mr-4 ${
+                className={`text-center font-semibold text-[24px] cursor-pointer mr-4 md:mr-0 ${
                   tab === "multi-chain" ? "text-[#144B44]" : "text-[#AAAAAA]"
                 } transition-colors`}
                 onClick={() => handleTabChange("multi-chain")}
