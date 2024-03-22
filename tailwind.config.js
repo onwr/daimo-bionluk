@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        yeni: ["THICCCBOI-Medium", "sans-serif"],
+        yeni: ["THICCCBOI-Bold", "sans-serif"],
       },
     },
   },

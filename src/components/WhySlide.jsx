@@ -87,79 +87,58 @@ const WhySlide = () => {
                 src={pixelBg}
               />
             </div>
-            <div className="my-6 flex justify-center gap-6">
+            <div className="my-10 flex justify-center mr-5 md:mr-10 gap-6">
               <button
                 type="button"
-                className={`relative h-2 w-2 rounded-full mr-4 md:ml-0 ${
+                className={`relative h-2 w-2 rounded-full ${
                   tab === "secure" ? "bg-gray-500" : "bg-gray-200"
                 }`}
-                aria-label="Secure Slide"
-                aria-selected={tab === "secure"}
                 onClick={() => handleTabChange("secure")}
-                tabIndex={tab === "global" ? 0 : -1}
               ></button>
               <button
                 type="button"
                 className={`relative h-2 w-2 rounded-full ${
                   tab === "global" ? "bg-gray-500" : "bg-gray-200"
                 }`}
-                aria-label="Global Slide"
-                aria-selected={tab === "global"}
                 onClick={() => handleTabChange("global")}
-                tabIndex={tab === "multi-chain" ? 0 : -1}
               ></button>
               <button
                 type="button"
-                className={`relative h-2 w-2 rounded-full ml-4 md:mr-0 ${
+                className={`relative h-2 w-2 rounded-full ${
                   tab === "multi-chain" ? "bg-gray-500" : "bg-gray-200"
                 }`}
-                aria-label="Multi-chain Slide"
-                aria-selected={tab === "multi-chain"}
                 onClick={() => handleTabChange("multi-chain")}
-                tabIndex={tab === "secure" ? 0 : -1}
               ></button>
             </div>
-            <div
-              className="border-b border-b-grayMid/40 py-4 flex flex-row justify-between z-50"
-              role="tablist"
-              aria-orientation="horizontal"
-            >
+            <div className="border-b border-b-gray-300/40 text-lg flex flex-row my-6 justify-evenly">
               <div
-                className={`text-center font-semibold text-[24px] ml-4 md:ml-0 cursor-pointer ${
+                className={`text-center font-semibold ml-3 md:ml-0 md:text-[24px] cursor-pointer ${
                   tab === "secure" ? "text-[#144B44]" : "text-[#AAAAAA]"
                 } transition-colors`}
                 onClick={() => handleTabChange("secure")}
-                role="tab"
-                aria-selected={tab === "secure"}
-                tabIndex={tab === "secure" ? 0 : -1}
               >
                 Güvenli
               </div>
               <div
-                className={`text-center font-semibold text-[24px] cursor-pointer ${
+                className={`text-center font-semibold md:text-[24px] cursor-pointer ${
                   tab === "global" ? "text-[#144B44]" : "text-[#AAAAAA]"
                 } transition-colors`}
                 onClick={() => handleTabChange("global")}
-                role="tab"
-                aria-selected={tab === "global"}
-                tabIndex={tab === "global" ? 0 : -1}
               >
                 Global
               </div>
               <div
-                className={`text-center font-semibold text-[24px] cursor-pointer mr-4 md:mr-0 ${
+                className={`text-center font-semibold md:text-[24px] cursor-pointer ${
                   tab === "multi-chain" ? "text-[#144B44]" : "text-[#AAAAAA]"
                 } transition-colors`}
                 onClick={() => handleTabChange("multi-chain")}
-                role="tab"
-                aria-selected={tab === "multi-chain"}
-                tabIndex={tab === "multi-chain" ? 0 : -1}
               >
                 Çoklu Zincir
               </div>
             </div>
+
             <div className="min-h-[35vh]">
-              <div className="block p-8" role="tabpanel" tabIndex={0}>
+              <div className="block p-8">
                 {tab === "secure" && (
                   <>
                     <h3 className="text-[38px] font-medium">
